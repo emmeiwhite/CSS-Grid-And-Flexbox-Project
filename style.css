@@ -6,45 +6,123 @@
 
 /* This is the world of CSS Grids and Flexbox */
 
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .container {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-areas:
-    "one one two three three"
-    "one one four five five"
-    "six seven seven five five"
-    "six eight nine nine ten";
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  height: 15rem;
 }
 
 .item-1 {
-  grid-area: one;
+  background: url("./Reno6-image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .item-2 {
-  grid-area: two;
+  background: greenyellow;
 }
+
 .item-3 {
-  grid-area: three;
+  background: burlywood;
 }
+
 .item-4 {
-  grid-area: four;
+  background: blue;
 }
+
 .item-5 {
-  grid-area: five;
+  background: rgb(0, 255, 179);
 }
+
 .item-6 {
-  grid-area: six;
+  background: yellowgreen;
 }
+
 .item-7 {
-  grid-area: seven;
+  background: teal;
 }
+
 .item-8 {
-  grid-area: eight;
+  background: paleturquoise;
 }
+
 .item-9 {
-  grid-area: nine;
+  background: rgb(126, 71, 5);
 }
+
 .item-10 {
-  grid-area: ten;
+  background: rgb(42, 165, 48);
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "one one two three three"
+      "one one four five five"
+      "six seven seven five five"
+      "six eight nine nine ten";
+  }
+
+  .item {
+    height: auto;
+  }
+
+  .item-1 {
+    grid-area: one;
+  }
+
+  .item-2 {
+    grid-area: two;
+  }
+
+  .item-3 {
+    grid-area: three;
+  }
+
+  .item-4 {
+    grid-area: four;
+  }
+
+  .item-5 {
+    grid-area: five;
+  }
+
+  .item-6 {
+    grid-area: six;
+  }
+
+  .item-7 {
+    grid-area: seven;
+  }
+
+  .item-8 {
+    grid-area: eight;
+  }
+
+  .item-9 {
+    grid-area: nine;
+  }
+
+  .item-10 {
+    grid-area: ten;
+  }
 }
